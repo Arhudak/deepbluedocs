@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/updated-DBD/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/@umich-lib/web@latest/umich-lib.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depositing into Deep Blue Documents</title>
+</head>
+<body>
+    <div class="sidebar-container"></div>
+
+    <div class="content">
+        <header>
+            <h1>Depositing into Deep Blue Documents</h1>
+        </header>
+
+        <section>
+            <h2 id="how-to-deposit">How to Deposit</h2>
+            <p>The process for depositing a Work into Deep Blue Documents is outlined below. This process is different for U-M faculty/staff compared to students. To determine eligibility, please refer to the "Eligibility" section on the About page. If you are a student, please consult the "Student Deposit Process" on the About page for further guidance. For U-M faculty and staff, please follow the steps below:</p>
+            <ol>
+                <li><strong>Log in to Deep Blue Documents</strong><br>
+                    Navigate to Deep Blue Documents and click "Login" in the upper right-hand corner.
+                </li>
+                <li><strong>Start a New Deposit</strong><br>
+                    Open your Deep Blue Documents dashboard by clicking on the menu icon in the upper left-hand corner. Click “Deposit” under "+ New” to begin a new deposit.
+                </li>
+                <li><strong>Select a Collection</strong><br>
+                    A pop-up will appear prompting you to select a collection. If a collection appears, select it and proceed. If not, contact your collection administrator to request access.
+                </li>
+                <li><strong>New Deposit Page</strong><br>
+                    After selecting a collection, you will be directed to the New Deposit page. Automate metadata such as Deposit Date, Depositor's Name, and more will be assigned to your Work.
+                </li>
+                <li><strong>Provide Required Metadata</strong><br>
+                    Fill in required details like Depositor Information, Author names, and Upload Files. Select a Creative Commons License and review the Deposit License.
+                </li>
+                <li><strong>Check for Completion</strong><br>
+                    A green check mark will appear next to each section once all required information is entered.
+                </li>
+                <li><strong>Finalizing Your Deposit</strong><br>
+                    Use Discard, Save, Save for later, or Deposit options to finalize. Note: Depositing locks the item and its metadata.
+                </li>
+            </ol>
+        </section>
+
+        <section>
+            <h2 id="missing-collections">Missing Collections While Depositing</h2>
+            <p>If you can’t find a collection in the dropdown box, you haven’t been added as a depositor. Please contact your collection administrator. If you have additional questions, feel free to Contact Us.</p>
+        </section>
+
+        <section>
+            <h2 id="metadata">Automatic and Enhanced Metadata</h2>
+            <p>Deep Blue Documents automatically assigns several pieces of metadata at the time of deposit. For improvements in access, the U-M Library may enhance the metadata.</p>
+        </section>
+
+        <section>
+            <h2 id="additional-info">Additional Information on Depositing Works</h2>
+            <h3>Accepted File Formats</h3>
+            <p>All digital formats are accepted, but preservation support varies. Research data should be deposited into Deep Blue Data.</p>
+
+            <h3>File Size Limitations</h3>
+            <p>Files larger than 5 GB require staff assistance for depositing. Please Contact Us for help with large files.</p>
+
+            <h3>Prohibited Types of Works</h3>
+            <p>Examples include data sets, software, administrative records, and works in progress. Contact Us for guidance.</p>
+
+            <h3>Inserting Special Characters</h3>
+            <p>Special characters can be included using system-specific methods described for Mac and Windows users.</p>
+
+            <h3>Batch Upload Process</h3>
+            <p>If you have more than twenty documents, staff can assist with a batch upload. Contact Us for more information.</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 University of Michigan Library</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Load the sidebar
+            fetch('components/nav.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('.sidebar-container').innerHTML = data;
+                    const currentLocation = window.location.href;
+
+                    // Highlight current page link
+                    document.querySelectorAll('.sidebar a').forEach(link => {
+                        if (link.href === currentLocation) {
+                            link.classList.add('active');
+                        }
+                    });
+
+                    // Dynamically add links based on h2 headings on the page
+                    const headings = document.querySelectorAll('.content h2');
+                    const currentPageLinks = document.createElement('ul'); // List for sub-links
+
+                    headings.forEach(heading => {
+                        const listItem = document.createElement('li');
+                        const link = document.createElement('a');
+                        link.href = `#${heading.id}`; // Anchor link to h2
+                        link.textContent = heading.textContent; // Heading text as link text
+                        listItem.appendChild(link);
+                        currentPageLinks.appendChild(listItem);
+                    });
+
+                    // Append newly created list below the active link in the sidebar
+                    const activeLink = document.querySelector('.sidebar a.active');
+                    if (activeLink && currentPageLinks.childElementCount > 0) {
+                        activeLink.parentElement.appendChild(currentPageLinks);
+                    }
+                })
+                .catch(error => console.error('Error loading sidebar:', error));
+        });
+    </script>
+</body>
+</html>
