@@ -2,32 +2,33 @@ html {
    scroll-behavior: smooth; /* Enables smooth scrolling for all anchor links */
 }
 
-
- /*Sidebar CSS*/
- .sidebar-container {
+/* Sidebar (Navigation) CSS */
+.sidebar-container {
    width: 25%;
    min-width: 200px;
    max-width: 300px;
    height: 100vh; /* Full viewport height */
    overflow-y: auto;
-   position: fixed; /* Fixed position */
+   position: fixed; /* Fixed position for larger screens */
    top: 0;
    left: 0;
    padding: 60px 0 0 30px;
+   background-color: #fff;
+   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+   z-index: 10; /* Ensure it's on top of content */
 }
 
- .sidebar ul {
-    list-style: none;
-    padding: 0em;
- }
- 
- 
- .sidebar .nav-header {
-    font-weight: bold;
-    margin-top: 15px;
- }
+.sidebar ul {
+   list-style: none;
+   padding: 0;
+}
 
- .sidebar li a {
+.sidebar .nav-header {
+   font-weight: bold;
+   margin-top: 15px;
+}
+
+.sidebar li a {
    text-decoration: none;
    color: #0072c6;
    display: block;
@@ -47,9 +48,7 @@ html {
    padding-left: 1.5em;
 }
 
- 
-
-/*Body CSS*/
+/* Body CSS */
 body {
    display: flex;
    margin: 0;
@@ -57,14 +56,31 @@ body {
 
 .content {
    flex: 1;
-   margin-left: 25%;
-   padding: 30px;
-   max-width: 800px;
+   margin-left: 26%; /* Matches sidebar width */
+   padding: 40px;
 }
 
 .content h1 {
    margin-bottom: 1em;
-   font-family:"Muli",sans-serif
-} 
+   font-family: "Muli", sans-serif;
+}
 
-
+/* Responsive Design */
+@media (max-width: 768px) {
+   body {
+       flex-direction: column; /* Stack elements vertically for small screens */
+   }
+   .sidebar-container {
+       position: relative;
+       width: 100%;
+       box-shadow: none;
+       padding: 10px;
+       overflow:visible;
+   }
+   .content {
+       width: 100%;
+       margin-left: 0;
+       padding: 20px;
+       order: 1; 
+   }
+}
