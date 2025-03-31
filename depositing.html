@@ -2,21 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/@umich-lib/web@latest/umich-lib.css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Depositing into Deep Blue Documents</title>
+    <link href="https://cdn.jsdelivr.net/npm/@umich-lib/web@latest/umich-lib.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css"> <!-- Ensure this path is correct -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@umich-lib/web@latest/dist/umich-lib/umich-lib.esm.js"></script>
 </head>
 <body>
-    <div class="sidebar-container"></div>
+    <!-- Skip link -->
+    <a href="#main-content" class="skip-to-content" aria-label="Skip to main content">Skip to main content</a>
 
-    <div class="content">
-        <header>
+   <!-- Header that spans the full width -->
+   <header>
+    <m-universal-header></m-universal-header>
+    <m-website-header name="Deep Blue Documents" variant="dark">
+        <button class="hamburger-menu" aria-label="Toggle menu">&#9776;</button>
+        <nav class="nav-links">
+            <a href="https://deepblue.lib.umich.edu/documents" style="color: white;">Home</a>
+            <a href="/about.html" style="color: white;">About</a>
+            <a href="/depositing.html" style="color: white;">Help</a>
+        </nav>
+    </m-website-header>
+</header>
+
+<!-- Flex container for sidebar and content -->
+    <div class="flex-container">
+        <div class="sidebar-container"><!-- Sidebar content loaded dynamically by JavaScript --></div>
+        <div id="main-content" class="content">
             <h1>Depositing into Deep Blue Documents</h1>
-        </header>
 
-        <section>
-            <h2 id="how-to-deposit">How to Deposit</h2>
+            <section>
+                <h2 id="how-to-deposit">How to Deposit</h2>
             <p>The process for depositing a Work into Deep Blue Documents is outlined below. This process is different for U-M faculty/staff compared to students. To determine eligibility, please refer to the "Eligibility" section on the About page. If you are a student, please consult the "Student Deposit Process" on the About page for further guidance. For U-M faculty and staff, please follow the steps below:</p>
             <ol>
                 <li><strong>Log in to Deep Blue Documents</strong><br>
@@ -71,11 +87,45 @@
             <p>If you have more than twenty documents, staff can assist with a batch upload. Contact Us for more information.</p>
         </section>
 
-        <footer>
-            <p>&copy; 2025 University of Michigan Library</p>
-        </footer>
+       
+        </div>
     </div>
+    <!-- Footer that spans the full width -->
+    <footer class="footer">
+        <div class="viewport-container">
+            <div class="footer__content">
+                <section class="first-column">
+                    <h2>University of Michigan Library</h2>
+                    <ul>
+                        <li><a href="https://lib.umich.edu/"><span class="address">913 S. University Avenue Ann Arbor, MI 48109-1190</span></a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Heading Column 2</h2>
+                    <ul>
+                        <li><a href="#">List item link</a></li>
+                        <li><a href="#">List item link</a></li>
+                        <li><a href="#">List item link</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Heading Column 3</h2>
+                    <ul>
+                        <li><a href="#">List item link</a></li>
+                        <li><a href="#">List item link</a></li>
+                        <li><a href="#">List item link</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <div class="footer__disclaimer">
+            <div class="viewport-container">
+                <p>© 2023, Regents of the University of Michigan</p>
+    
+            </div>
+        </div>
+    </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js"></script> <!-- Ensure this path is correct -->
 </body>
 </html>

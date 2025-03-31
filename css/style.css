@@ -1,21 +1,70 @@
-html {
-   scroll-behavior: smooth; /* Enables smooth scrolling for all anchor links */
+html, body {
+   margin: 0;
+   padding: 0;
+   scroll-behavior: smooth;
 }
 
-/* Sidebar (Navigation) CSS */
+/* Header elements */
+m-universal-header, m-website-header {
+   width: 100%;
+   position: relative;
+   z-index: 20;
+}
+/* Style for the hamburger button */
+.hamburger-menu {
+   display: none; /* Hidden by default */
+   background: none;
+   border: none;
+   font-size: 2rem;
+   color: white;
+   cursor: pointer;
+   position: absolute;
+   top: 15px;
+   right: 15px;
+   z-index: 30;
+}
+
+/* Default navigation links */
+.nav-links {
+   display: flex;
+   gap: 50px;
+}
+
+
+/* Skip to main content link */
+.skip-to-content {
+   position: absolute;
+   top: 0;
+   left: 0;
+   background: var(--color-blue-400); /* Ensure variable is defined or use a color */
+   color: #fff;
+   padding: 10px; /* Ensure this value matches your design */
+   z-index: 10000; /* High z-index to ensure it appears on top */
+   transform: translateY(-100%);
+   transition: transform 0.3s ease;
+   clip: rect(0 0 0 0);
+}
+
+.skip-to-content:focus {
+   transform: translateY(0);
+   clip: auto;
+}
+
+/* Flex container for sidebar and content */
+.flex-container {
+   display: flex;
+}
+
 .sidebar-container {
    width: 25%;
    min-width: 200px;
    max-width: 300px;
-   height: 100vh; /* Full viewport height */
-   overflow-y: auto;
-   position: fixed; /* Fixed position for larger screens */
-   top: 0;
-   left: 0;
-   padding: 60px 0 0 30px;
    background-color: #fff;
    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-   z-index: 10; /* Ensure it's on top of content */
+   padding: 20px;
+   overflow-y: auto;
+   position: relative;
+   z-index: 10;
 }
 
 .sidebar ul {
@@ -48,39 +97,124 @@ html {
    padding-left: 1.5em;
 }
 
-/* Body CSS */
-body {
-   display: flex;
-   margin: 0;
-}
-
 .content {
    flex: 1;
-   margin-left: 26%; /* Matches sidebar width */
+   margin-left: 0; /* Reset from any previous styling */
    padding: 40px;
-}
-
-.content h1 {
-   margin-bottom: 1em;
    font-family: "Muli", sans-serif;
 }
 
+
+.footer {
+   background: var(--color-blue-400);
+ }
+ 
+ .footer ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+ }
+ 
+ .footer ul a {
+   display: inline-block;
+   padding: .25rem 0;
+ }
+ 
+ .footer ul a:hover {
+   text-decoration: underline;
+   text-decoration-thickness: 1px;
+ }
+ 
+ .footer ul a span:hover {
+   text-decoration: underline;
+   text-decoration-thickness: 1px;
+ }
+ 
+ .footer a {
+   color: white;
+ }
+ 
+ .footer a > svg {
+   margin-right: 0.5em;
+ }
+ 
+ .address {
+   max-width: 22ch;
+ }
+ 
+ .footer__content {
+   color: var(--color-blue-100);
+   padding: 3rem 0;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, 350px);
+   gap: 3rem;
+ }
+ 
+ .footer__content .first-column ul li a {
+   text-decoration: none;
+   display: flex;
+   align-items: baseline;
+ }
+ 
+ .footer__content ul li a {
+   text-decoration: none;
+ }
+ 
+ .footer__content h2 {
+   color: var(--color-blue-200);
+   font-size: 0.875rem;
+   font-weight: 800;
+   letter-spacing: 1.25px;
+   text-transform: uppercase;
+   margin-bottom: 1rem;
+ }
+ .footer__policies {
+   border-left: solid 1px var(--color-blue-300);
+   padding-left: 2em;
+ }
+ 
+ 
+
 /* Responsive Design */
 @media (max-width: 768px) {
-   body {
-       flex-direction: column; /* Stack elements vertically for small screens */
+   .flex-container {
+       flex-direction: column;
    }
+
    .sidebar-container {
-       position: relative;
        width: 100%;
        box-shadow: none;
        padding: 10px;
-       overflow:visible;
+       overflow: visible;
    }
+
    .content {
        width: 100%;
-       margin-left: 0;
        padding: 20px;
-       order: 1; 
    }
+
+   .hamburger-menu {
+      display: block;
+  }
+
+  .nav-links {
+      display: none; /* Initially hidden */
+      flex-direction: column;
+      width: 100%;
+      padding: 10px 0;
+  }
+
+  .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+      text-align: center;
+  }
+
+  /* Show menu when toggled */
+  .nav-links.show {
+      display: flex;
+  }
 }
+
