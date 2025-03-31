@@ -5,29 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Depositing into Deep Blue Documents</title>
     <link href="https://cdn.jsdelivr.net/npm/@umich-lib/web@latest/umich-lib.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="css/style.css"> <!-- Ensure this path is correct -->
+    <link rel="stylesheet" href="css/style.css"> 
     <script type="module" src="https://cdn.jsdelivr.net/npm/@umich-lib/web@latest/dist/umich-lib/umich-lib.esm.js"></script>
 </head>
 <body>
     <!-- Skip link -->
     <a href="#main-content" class="skip-to-content" aria-label="Skip to main content">Skip to main content</a>
-
-   <!-- Header that spans the full width -->
+     <!-- Both headers-->
    <header>
     <m-universal-header></m-universal-header>
     <m-website-header name="Deep Blue Documents" variant="dark">
         <button class="hamburger-menu" aria-label="Toggle menu">&#9776;</button>
         <nav class="nav-links">
             <a href="https://deepblue.lib.umich.edu/documents" style="color: white;">Home</a>
-            <a href="/about.html" style="color: white;">About</a>
-            <a href="/depositing.html" style="color: white;">Help</a>
+            <a href="about.html" style="color: white;">About</a>
+            <a href="depositing.html" style="color: white;">Help</a>
         </nav>
     </m-website-header>
 </header>
 
 <!-- Flex container for sidebar and content -->
     <div class="flex-container">
-        <div class="sidebar-container"><!-- Sidebar content loaded dynamically by JavaScript --></div>
+        <div class="sidebar-container"><!-- Sidebar content loaded by JS --></div>
         <div id="main-content" class="content">
             <h1>Depositing into Deep Blue Documents</h1>
 
@@ -90,7 +89,7 @@
        
         </div>
     </div>
-    <!-- Footer that spans the full width -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="viewport-container">
             <div class="footer__content">
@@ -126,6 +125,6 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script> <!-- Ensure this path is correct -->
+    <script src="js/script.js"></script> 
 </body>
 </html>
