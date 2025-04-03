@@ -4,9 +4,13 @@ html, body {
    scroll-behavior: smooth;
 }
 
+body h1 {
+   font-family: var(--font-base-family);
+}
+
 /* Style for the hamburger button */
 .hamburger-menu {
-   display: block; /* Visible by default on small devices */
+   display: block; 
    background: none;
    border: none;
    font-size: 2rem;
@@ -21,7 +25,7 @@ html, body {
 
 /* Default navigation links */
 .nav-links {
-   display: none; /* Initially hidden on small screens */
+   display: none; 
    flex-direction: column;
    width: 100%;
    padding: 10px 0;
