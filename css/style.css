@@ -17,7 +17,6 @@ body h1 {
    color: white;
    cursor: pointer;
    position: absolute;
-   top: 50px;
    right: 0;
    padding: 20px;
    z-index: 30;
@@ -241,7 +240,6 @@ caption {
 
    .nav-links {
        display: flex;
-       gap: 50px;
        width: auto;
        padding: 0;
        flex-direction: row;
