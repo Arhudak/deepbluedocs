@@ -43,3 +43,15 @@ document.addEventListener("DOMContentLoaded", function () {
         navLinks.classList.toggle("show");
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Load header and footer components
+    loadComponent('src/components/header.html', 'header');
+    loadComponent('src/components/footer.html', 'footer');
+
+    // Load sidebar component
+    loadComponent('components/nav.html', '.sidebar-container');
+
+    // Set a small delay to ensure that the components are loaded
+    setTimeout(initPage, 100); // Adjust the delay as needed for your application
+});

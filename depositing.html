@@ -9,20 +9,11 @@
     <script type="module" src="https://cdn.jsdelivr.net/npm/@umich-lib/web@latest/dist/umich-lib/umich-lib.esm.js"></script>
 </head>
 <body>
-    <!-- Skip link -->
-    <a href="#main-content" class="skip-to-content" aria-label="Skip to main content">Skip to main content</a>
-     <!-- Both headers-->
-   <header>
-    <m-universal-header></m-universal-header>
-    <m-website-header name="Deep Blue Documents" variant="dark">
-        <button class="hamburger-menu" aria-label="Toggle menu">&#9776;</button>
-        <nav class="nav-links">
-            <!-- <a href="https://deepblue.lib.umich.edu/documents" style="color: white;">Home</a> -->
-            <a href="about.html" style="color: white;">About</a>
-            <a href="depositing.html" style="color: white;">Help</a>
-        </nav>
-    </m-website-header>
-</header>
+   <!-- Skip link -->
+   <a href="#main-content" class="skip-to-content" aria-label="Skip to main content">Skip to main content</a>
+
+   <!-- Header loaded by JS -->
+   <header></header>
 
 <!-- Flex container for sidebar and content -->
     <div class="flex-container">
@@ -89,42 +80,8 @@
        
         </div>
     </div>
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="viewport-container">
-            <div class="footer__content">
-                <section class="first-column">
-                    <h2>University of Michigan Library</h2>
-                    <ul>
-                        <li><a href="https://www.lib.umich.edu/">U-M Library</a></li>
-                        <li><a href="https://publishing.umich.edu/">Michigan Publishing</a></li>
-                        <li><a href="https://www.lib.umich.edu/about-us/about-library/diversity-equity-inclusion-and-accessibility/accessibility">Accessibility</a></li>
-                    </ul>
-                </section>
-                <section>
-                    <h2>About Deep Blue Documents</h2>
-                    <ul>
-                        <li> <a href="about.html">About Deep Blue Documents</a></li>
-                        <li> <a href="depositing.html">Help</a></li>
-                        <li><a href="https://teamdynamix.umich.edu/TDClient/88/Portal/Requests/TicketRequests/NewForm?ID=7Az64AR5TqI_&amp;RequestorType=Service">Contact Us</a></li>
-                    </ul>
-                </section>
-                <section>
-                    <h2>Privacy and copyright</h2>
-                    <ul>
-                        <li><a href="https://lib.umich.edu/about-us/policies/library-privacy-statement">Library Privacy Statement</a></li>
-                        <li><p>*Works found in Deep Blue Documents are protected by copyright unless otherwise indicated.</p></li>
-                    </ul>
-                </section>
-            </div>
-        </div>
-        <div class="footer__disclaimer">
-            <div class="viewport-container">
-                <p>© 2023, Regents of the University of Michigan</p>
-               
-            </div>
-        </div>
-    </footer>
+    <!-- Footer loaded by JS -->
+    <footer></footer>
 
     <script src="js/script.js"></script> 
 </body>
