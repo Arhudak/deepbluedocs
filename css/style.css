@@ -8,6 +8,16 @@ body h1 {
    font-family: var(--font-base-family);
 }
 
+img {
+   display: block; 
+   height: auto;  
+   width: auto;   
+   max-height: 400px; 
+   max-width: 600px;  
+   margin: 10px 10px 20px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 /* Style for the hamburger button */
 .hamburger-menu {
    display: block; 
