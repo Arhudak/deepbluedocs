@@ -46,6 +46,7 @@ img {
    padding: 10px 15px;
    display: block;
    text-align: center;
+   background-color: var(--color-blue-400);
 }
 
 /* Show menu when toggled */
@@ -221,6 +222,10 @@ caption {
 .footer__policies {
    border-left: solid 1px var(--color-blue-300);
    padding-left: 2em;
+}
+
+.footer__disclaimer{
+   color: var(--color-blue-100);
 }
 
 /* Media queries for larger screens */
