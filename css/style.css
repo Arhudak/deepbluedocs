@@ -242,6 +242,11 @@ caption {
        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
        overflow-y: auto;
        line-height: 1.5;
+       height: 100vh;
+       /* Add sticky positioning (if we want) */
+       position: sticky;
+       top: 0; 
+       align-self: flex-start; 
    }
 
    .content {
