@@ -128,6 +128,9 @@ img {
    font-family: "Muli", sans-serif;
    width: 100%;
 }
+.indented-content p {
+   margin-left: 2em;
+ }
 
 /*Table styles with border color*/
 table {
