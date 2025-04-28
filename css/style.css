@@ -127,7 +127,14 @@ img {
    padding: 20px;
    font-family: "Muli", sans-serif;
    width: 100%;
+   max-width: 80ch;
+   margin: 0 auto;
 }
+.content h1, .content h2, .content h3, .content p {
+   max-width: 80ch;
+   line-height: 1.5;
+}
+
 .indented-content p {
    margin-left: 2em;
  }
