@@ -104,7 +104,7 @@ img {
 
 .sidebar li a {
    text-decoration: none;
-   color: #0072c6;
+   color: var(--color-teal-400);
    display: block;
    padding: 0.5em 1em;
 }
@@ -114,8 +114,10 @@ img {
 }
 
 .sidebar a.active {
-   font-weight: bold;
-   color: #005599;
+   font-weight: var(--bold);
+   color: var(--color-teal-400);
+   padding-left: 12px;
+   border-left: solid 4px var(--color-teal-400);
 }
 
 .sidebar ul ul {
