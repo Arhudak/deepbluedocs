@@ -23,10 +23,9 @@ img {
    display: block; 
    background: none;
    border: none;
-   font-size: 2rem;
+   font-size: 1.5rem;
    color: white;
    cursor: pointer;
-   position: absolute;
    right: 0;
    padding: 20px;
    z-index: 30;
@@ -44,6 +43,7 @@ img {
    color: white;
    text-decoration: none;
    padding: 10px 15px;
+   margin: 5px 0;
    display: block;
    text-align: center;
    background-color: var(--color-blue-400);
@@ -52,6 +52,7 @@ img {
 /* Show menu when toggled */
 .nav-links.show {
    display: flex;
+   align-items: flex-end;
 }
 
 /* Skip to main content link */
@@ -95,9 +96,10 @@ img {
    padding: 0;
 }
 
-.sidebar .nav-header {
+.sidebar .nav-header h2 {
    font-weight: bold;
    margin-top: 15px;
+   font-size: 1.2em;
 }
 
 .sidebar li a {
